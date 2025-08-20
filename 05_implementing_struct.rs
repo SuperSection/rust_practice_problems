@@ -15,6 +15,9 @@ impl Rect {
     fn area(&self) -> u32 {
         self.width * self.height
     }
+    fn perimeter(&self) -> u32 {
+        2 * (self.width + self.height)
+    }
 }
 
 fn main() {
@@ -28,5 +31,11 @@ fn main() {
         rect.width,
         rect.height,
         rect.area()
+    );
+    println!(
+        "The perimeter of the rectangle ({}x{}) is {}",
+        rect.width,
+        rect.height,
+        rect.perimeter()
     );
 }
